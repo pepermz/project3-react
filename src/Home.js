@@ -1,11 +1,13 @@
-import Search from "./components/Search"
+import SearchContainer from './components/SearchContainer'
 
 
 const Home = () => {
  
 
   return(
-    <div><Search /></div>
+    <div>
+      <SearchContainer />  
+    </div>
   )
 }
 
