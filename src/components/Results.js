@@ -8,7 +8,7 @@ const Results =(props) => {
     const showData = props.results.map((image, idx) => {
         // console.log(`this is the console log we need !!! ${JSON.stringify(image.relationships.featured_photo.data.id)}`)
             return(
-            <Link className="results" to={'/results/:id'} key={idx}>{ ` ${image.attributes.name} ` }</Link>
+            <Link className="results" to={'/:id'} key={idx}>{ ` ${image.attributes.name} ` }</Link>
             //  <img src={(image.relationships.featured_photo.data.id)} alt={`name`} key={idx}/>
              
             )

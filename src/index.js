@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import Home from './Home.js'
 import App from "./App.js";
 import Nav from "./components/Nav.js";
+import SearchedItem from "./components/SearchedItem.js";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 
@@ -14,11 +15,8 @@ root.render(
       <Routes >
         <Route path="/" element={<App />} >
           <Route index element={<Home />} />
-          {/* <Route path="currencies/" element={<Currencies />} />
-          <Route path="price/" element={<Price />} >
-            <Route path=":symbol" element={<Price />} />
-          </Route> */}
+            <Route path=":id" element={<SearchedItem />} />
         </Route>
       </Routes>
-    </Router>
+  </Router>
 )
