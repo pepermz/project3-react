@@ -6,6 +6,8 @@ import Nav from "./components/Nav.js";
 import SearchedItem from "./components/SearchedItem.js";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import Results from "./components/Results.js";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -15,7 +17,7 @@ root.render(
       <Routes >
         <Route path="/" element={<App />} >
           <Route index element={<Home />} />
-            <Route path=":id" element={<SearchedItem />} />
+            <Route path={`/:id`} element={<SearchedItem />} />
         </Route>
       </Routes>
   </Router>

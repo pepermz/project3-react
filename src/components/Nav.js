@@ -7,9 +7,9 @@ const Nav = (props) => {
 			<Link to="/">
 				<div>Home</div>
 			</Link>
-			<Link to="/:id">
+			{/* <Link to="/:id">
 				<div>Results</div>
-			</Link>
+			</Link> */}
 		</div>
 	)
 }

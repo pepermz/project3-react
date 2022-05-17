@@ -6,16 +6,19 @@ const Results =(props) => {
     console.log(props.results)
 
     const showData = props.results.map((image, idx) => {
+        console.log(image)
         // console.log(`this is the console log we need !!! ${JSON.stringify(image.relationships.featured_photo.data.id)}`)
             return(
-            <Link className="results" to={'/:id'} key={idx}>{ ` ${image.attributes.name} ` }</Link>
-            //  <img src={(image.relationships.featured_photo.data.id)} alt={`name`} key={idx}/>
-             
+             <div>  
+            <Link  to={`/${image.id}`} key={idx}>{ ` ${image.attributes.name} ` }</Link>
+            </div>
+            // {/* {image.relationships.featured_photo.data ? <img src={(image.relationships.featured_photo)} alt={`name`} key={idx}/> : null }  */}
+            
             )
 
         }
     )
-    console.log(showData)
+    // console.log(showData)
 
     return(
         <>
