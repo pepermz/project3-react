@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect} from "react"
+import Banner from "./Banner";
 
 const SearchedItem = (props) => {
     const [image, setLocation] = useState({})
@@ -25,6 +26,7 @@ const SearchedItem = (props) => {
         // console.log(`this is the console log we need !!! ${JSON.stringify(image.relationships.featured_photo.data.id)}`)
         return(
           <div>
+            <Banner />
            <h1>{image.attributes && image.attributes.name}</h1>
            <a href={image.attributes && image.attributes.airbnb_url}>Click here for Airbnb</a>
            {/* <div>{image.attributes && image.relationships.photos.data[0].id} </div> */}
