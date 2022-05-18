@@ -7,7 +7,7 @@ const  auth_key = btoa('4f96b20b94d0c2e382d8d516663744f0:3418c931bd19226ace3c0de
 const SearchContainer = () => {
     const[query, setQuery] = useState([])
     const[results, setResults] = useState([])
-
+    
     async function handleSubmit(e){
         e.preventDefault()
         // console.log(`Searched for ${query}`)

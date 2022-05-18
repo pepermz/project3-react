@@ -8,7 +8,7 @@ import kayak from "../assets/kayak.png"
 
 const SearchedItem = (props) => {
     const [image, setLocation] = useState({})
-    const apikey = process.env.ACCESS_KEY;
+    // const apikey = process.env.REACT_APP_ACCESS_KEY;
     const  auth_key = btoa('4f96b20b94d0c2e382d8d516663744f0:3418c931bd19226ace3c0dea40b7b54c').toString('base64');
     const { id }= useParams();
     const URL = `https://api.roadgoat.com/api/v2/destinations/${id}`
