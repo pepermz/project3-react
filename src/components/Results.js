@@ -9,8 +9,8 @@ const Results =(props) => {
         console.log(image)
         // console.log(`this is the console log we need !!! ${JSON.stringify(image.relationships.featured_photo.data.id)}`)
             return(
-             <div>  
-            <Link  className="card" to={`/${image.id}`} key={idx}>{ ` ${image.attributes.name} ` }</Link>
+             <div className="container-results">  
+            <Link  className="results-card" to={`/${image.id}`} key={idx}>{ ` ${image.attributes.name} ` }</Link>
             </div>
             // {/* {image.relationships.featured_photo.data ? <img src={(image.relationships.featured_photo)} alt={`name`} key={idx}/> : null }  */}
             
