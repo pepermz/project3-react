@@ -50,6 +50,11 @@ align-items: center;
 .searchbar{
   margin-bottom: 5%;
 }
+.home-nav{
+  text-decoration: none;
+  color: white;
+  font-size: larger;
+}
 .nav {
   text-align: center;
   justify-content: center;
@@ -61,15 +66,29 @@ align-items: center;
   background: rgb(255,235,235);
 background: linear-gradient(180deg, rgba(255,235,235,1) 0%, rgba(245,248,255,1) 30%, rgba(252,244,255,1) 49%, rgba(255,238,238,1) 64%, rgba(255,255,255,1) 93%);
 }
- .profile-photo{
+.bg-myRed{
+  background-color: #FE7171;
+}
+.footer-photo{
+  height: 50px;
+  position: absolute ;
+  right: 40%;
+}
+.profile-photo{
   position: absolute;
-  top: 1084px;
-  left: 75%;
+  bottom: -50%;
+  right: 0%;
   margin: .75rem;
   height: 350px;
   width: 350px;
-  
-  
+}
+.profile-photo1{
+  position: absolute;
+  top: 45%;
+  left: 0%;
+  margin: .75rem;
+  height: 350px;
+  width: 350px;
 }
  
 @media only screen and (max-width: 200px) {

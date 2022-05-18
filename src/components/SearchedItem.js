@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { useState, useEffect} from "react"
 import Banner from "./Banner";
 import airbnb from "../assets/airbnb.png"
-import foursquare from "../assets/foursquarelogo.png"
+import getyourguide from "../assets/getyourguide.png"
 import google from "../assets/googlelogo.png"
 import kayak from "../assets/kayak.png"
 
@@ -45,8 +45,8 @@ const SearchedItem = (props) => {
            <a className="card1" href={image.attributes && image.attributes.kayak_car_rental_url}>
            <img className="card-img"  alt="kayak"src={kayak}/>
            </a>
-           <a className="card1" href={image.attributes && image.attributes.foursquare_url}>
-           <img className="card-img"  alt="foursquare"src={foursquare}/>
+           <a className="card1" href={image.attributes && image.attributes.getyourguide_url}>
+           <img className="card-img"  alt="getyourguide"src={getyourguide}/>
            </a>
            </div>
            {/* <p>Budget: {image.attributes && image.attributes.budget[0]}</p> */}

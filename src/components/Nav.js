@@ -7,13 +7,14 @@ import AboutMe from "./AboutMe"
 const Nav = (props) => {
 	return (
 		<div className="menu">
-			<Navbar bg='dark' variant="dark">
+			<Navbar bg='myRed' variant="dark">
 				<Navbar.Brand>
 					Logo
 				</Navbar.Brand>
 			<Link to="/">
-				<div>Home</div>
+				<div className="home-nav">Home</div>
 			</Link>
+			<img className="footer-photo" src={require("../assets/footer.png")} alt={"banner"}/>
 			<NavItem>
         </NavItem>
 			</Navbar>
