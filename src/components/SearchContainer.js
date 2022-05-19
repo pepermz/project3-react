@@ -10,7 +10,6 @@ const SearchContainer = () => {
     const  auth_key = btoa(apikey).toString('base64');
     async function handleSubmit(e){
         e.preventDefault()
-        // console.log(`Searched for ${query}`)
         try {
             console.log('Hitting the API')
             const URL = `https://api.roadgoat.com/api/v2/destinations/auto_complete?q=${query}`
