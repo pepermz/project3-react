@@ -11,7 +11,6 @@ const SearchContainer = () => {
     async function handleSubmit(e){
         e.preventDefault()
         try {
-            console.log('Hitting the API')
             const URL = `https://api.roadgoat.com/api/v2/destinations/auto_complete?q=${query}`
             var options = {
                 'method': 'GET',

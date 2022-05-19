@@ -6,7 +6,6 @@ import getyourguide from "../assets/getyourguide.png"
 import google from "../assets/googlelogo.png"
 import kayak from "../assets/kayak.png"
 import Footer from "./Footer";
-// require('dotenv').config()
 
 const SearchedItem = (props) => {
     const [image, setLocation] = useState({})
@@ -25,7 +24,6 @@ const SearchedItem = (props) => {
         .then(res => res.json())
         .then(data => setLocation(data.data))
     }
-    console.log(image)
     useEffect(() => {
         fetchDetails()
     }, [])
