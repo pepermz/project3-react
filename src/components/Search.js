@@ -1,4 +1,5 @@
 import Banner from "./Banner"
+import Footer from "./Footer"
 
 
 const Search = (props) => {
@@ -8,9 +9,10 @@ const Search = (props) => {
         <Banner/>
         <h1 className="enterDestination">Enter a destination!</h1>
             <form onSubmit={props.handleSubmit} className="searchbar">
-                <input type="text" onChange={props.handleChange} value={props.query}/>
-                <button>Search</button>
+                <input type="text" className="search-input" onChange={props.handleChange} value={props.query}/>
+                <button className="button">Search</button>
             </form>
+            <Footer />
         </>
     )
 }

@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import Search from './Search.js'
 import Results from './Results.js'
+// require('dotenv').config()
 
-const  auth_key = btoa('4f96b20b94d0c2e382d8d516663744f0:3418c931bd19226ace3c0dea40b7b54c').toString('base64');
+// const  auth_key = btoa('4f96b20b94d0c2e382d8d516663744f0:3418c931bd19226ace3c0dea40b7b54c').toString('base64');
 // btoa 
 const SearchContainer = () => {
     const[query, setQuery] = useState([])
     const[results, setResults] = useState([])
-    
+    const apikey = process.env.REACT_APP_ACCESS_KEY;
+    const  auth_key = btoa(apikey).toString('base64');
     async function handleSubmit(e){
         e.preventDefault()
         // console.log(`Searched for ${query}`)

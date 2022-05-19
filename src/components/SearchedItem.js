@@ -5,11 +5,13 @@ import airbnb from "../assets/airbnb.png"
 import getyourguide from "../assets/getyourguide.png"
 import google from "../assets/googlelogo.png"
 import kayak from "../assets/kayak.png"
+import Footer from "./Footer";
+// require('dotenv').config()
 
 const SearchedItem = (props) => {
     const [image, setLocation] = useState({})
-    // const apikey = process.env.REACT_APP_ACCESS_KEY;
-    const  auth_key = btoa('4f96b20b94d0c2e382d8d516663744f0:3418c931bd19226ace3c0dea40b7b54c').toString('base64');
+    const apikey = process.env.REACT_APP_ACCESS_KEY;
+    const  auth_key = btoa(apikey).toString('base64');
     const { id }= useParams();
     const URL = `https://api.roadgoat.com/api/v2/destinations/${id}`
     var options = {
@@ -27,8 +29,7 @@ const SearchedItem = (props) => {
     useEffect(() => {
         fetchDetails()
     }, [])
-   
-        // console.log(`this is the console log we need !!! ${JSON.stringify(image.relationships.featured_photo.data.id)}`)
+
         return(
           <div>
             <Banner />
@@ -49,8 +50,7 @@ const SearchedItem = (props) => {
            <img className="card-img"  alt="getyourguide"src={getyourguide}/>
            </a>
            </div>
-           {/* <p>Budget: {image.attributes && image.attributes.budget[0]}</p> */}
-           {/* <div> {image.relationships.photos.data.id ? <img src={(image.relationships.photos.data.id)} alt={`name`} /> : null } </div> */}
+           < Footer />
           </div>
         )
 } 
