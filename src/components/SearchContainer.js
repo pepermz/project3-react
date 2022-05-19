@@ -13,7 +13,6 @@ const SearchContainer = () => {
         try {
             console.log('Hitting the API')
             const URL = `https://api.roadgoat.com/api/v2/destinations/auto_complete?q=${query}`
-            //add configuration store the var options
             var options = {
                 'method': 'GET',
                 'headers': {
@@ -22,7 +21,6 @@ const SearchContainer = () => {
               };
             const response = await fetch(URL, options)
             const data = await response.json()
-            // console.log(data)
             setResults(data.data)
         } catch (error) {
             console.log(error)
